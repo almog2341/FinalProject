@@ -1,0 +1,330 @@
+I’ll create four professional HTML pages (index.html, dash1.html, dash2.html, dash3.html) with modern CSS styling, JavaScript for interactivity, and a sporty, vibrant design using gradients. The pages will reflect a visual information system for "Nike Israel" focused on business management, strategy, and operations. Each page will include relevant sections, buttons linking to other pages, embedded Tableau visualizations for dash1.html, dash2.html, and dash3.html, and sporty imagery/emojis for a fun, engaging look.
+
+Since you’ve requested four artifacts, I’ll generate each page as a separate <xaiArtifact> with unique UUIDs, ensuring proper linking, modern gradient-based styling, and embedded Tableau visualizations. The design will use Tailwind CSS for consistency and responsiveness, and I’ll include sporty emojis (🏀⚽🏃‍♂️) and imagery placeholders. JavaScript will handle smooth navigation and button interactions.
+
+### index.html
+This will be the main page with a bold header, a description of the system’s goals (business management, strategy, operations), and three buttons linking to dash1.html, dash2.html, and dash3.html. It will feature a gradient background and sporty visuals.
+
+### dash1.html, dash2.html, dash3.html
+Each dashboard page will include:
+- A header specific to the system (e.g., “Business Management System” for dash1).
+- A description of the system’s purpose.
+- An embedded Tableau visualization from the provided links.
+- Navigation buttons to return to index.html or visit other dashboards.
+- Sporty design elements and emojis.
+
+Below are the four artifacts, each wrapped in an <xaiArtifact> tag with unique UUIDs, proper titles, and contentType set to "text/html". The styling uses Tailwind CSS via CDN, and JavaScript ensures smooth button interactions. The design incorporates gradients (blue-to-orange for a dynamic, sporty feel) and placeholders for sporty images.
+
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המערכת הויזואלית של נייק ישראל</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #f97316);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x400?text=Sporty+Banner');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ea580c;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="hero py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🏀 המערכת הויזואלית של נייק ישראל 🏃‍♂️</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">מערכת ויזואליזציה מתקדמת לקבלת החלטות בניהול עסקי, אסטרטגיה עסקית ותפעול והפצה</p>
+    </header>
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">🎯 מטרות המערכת</h2>
+            <p class="text-lg max-w-2xl mx-auto">המערכת מספקת כלים ויזואליים לניתוח נתונים עסקיים, תרשימי זרימה של תהליכים, מעקב אחר מלאי מוצרים (כגון נעליים, ביגוד ואביזרים), ניהול שרשרת אספקה, ותמיכה בקבלת החלטות שיווקיות ואסטרטגיות עבור נייק ישראל.</p>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="dash1.html" class="btn bg-orange-500 text-white py-4 px-6 rounded-lg text-center">מערכת 1 - ניהול עסקי ⚙️</a>
+            <a href="dash2.html" class="btn bg-orange-500 text-white py-4 px-6 rounded-lg text-center">מערכת 2 - אסטרטגיה עסקית 📊</a>
+            <a href="dash3.html" class="btn bg-orange-500 text-white py-4 px-6 rounded-lg text-center">מערכת 3 - תפעול והפצה 🚚</a>
+        </section>
+        <section class="mt-12">
+            <img src="https://via.placeholder.com/600x300?text=Sporty+Image" alt="Sporty Visual" class="mx-auto rounded-lg shadow-lg">
+        </section>
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2025 נייק ישראל. כל הזכויות שמורות. 🏅</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת 1 - ניהול עסקי</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #f97316);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ea580c;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="py-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">⚙️ מערכת 1 - ניהול עסקי</h1>
+        <p class="text-lg max-w-2xl mx-auto">ניתוח נתונים עסקיים, מעקב אחר מכירות, ותמיכה בקבלת החלטות ניהוליות.</p>
+    </header>
+    <nav class="container mx-auto px-4 mb-8">
+        <div class="flex justify-center gap-4">
+            <a href="index.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">חזרה לדף הראשי 🏠</a>
+            <a href="dash2.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">אסטרטגיה עסקית 📊</a>
+            <a href="dash3.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">תפעול והפצה 🚚</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">📈 תרשים ניהול עסקי</h2>
+            <div class='tableauPlaceholder' id='viz17524321489540' style='position: relative'>
+                <noscript><a href='#'><img alt='sheet6 ' src='https://public.tableau.com/static/images/_1/_17524321489540/sheet6/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='_17524321489540/sheet6' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/_1/_17524321489540/sheet6/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz17524321489540');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </section>
+        <section>
+            <img src="https://via.placeholder.com/600x300?text=Business+Management+Sporty+Image" alt="Business Visual" class="mx-auto rounded-lg shadow-lg">
+        </section>
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2025 נייק ישראל. כל הזכויות שמורות. 🏅</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת 2 - אסטרטגיה עסקית</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #f97316);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ea580c;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="py-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">📊 מערכת 2 - אסטרטגיה עסקית</h1>
+        <p class="text-lg max-w-2xl mx-auto">תכנון אסטרטגי, ניתוח שוק, ופיתוח תוכניות צמיחה עבור נייק ישראל.</p>
+    </header>
+    <nav class="container mx-auto px-4 mb-8">
+        <div class="flex justify-center gap-4">
+            <a href="index.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">חזרה לדף הראשי 🏠</a>
+            <a href="dash1.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">ניהול עסקי ⚙️</a>
+            <a href="dash3.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">תפעול והפצה 🚚</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">📈 תרשים אסטרטגיה עסקית</h2>
+            <div class='tableauPlaceholder' id='viz17524320926220' style='position: relative'>
+                <noscript><a href='#'><img alt='sheet7 ' src='https://public.tableau.com/static/images/_1/_17524320926220/sheet7/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='_17524320926220/sheet7' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/_1/_17524320926220/sheet7/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz17524320926220');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </section>
+        <section>
+            <img src="https://via.placeholder.com/600x300?text=Strategy+Sporty+Image" alt="Strategy Visual" class="mx-auto rounded-lg shadow-lg">
+        </section>
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2025 נייק ישראל. כל הזכויות שמורות. 🏅</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת 3 - תפעול והפצה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #f97316);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ea580c;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="py-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">🚚 מערכת 3 - תפעול והפצה</h1>
+        <p class="text-lg max-w-2xl mx-auto">ניהול לוגיסטיקה, שרשרת אספקה, והפצת מוצרים ביעילות.</p>
+    </header>
+    <nav class="container mx-auto px-4 mb-8">
+        <div class="flex justify-center gap-4">
+            <a href="index.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">חזרה לדף הראשי 🏠</a>
+            <a href="dash1.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">ניהול עסקי ⚙️</a>
+            <a href="dash2.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">אסטרטגיה עסקית 📊</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">📈 תרשים תפעול והפצה</h2>
+            <div class='tableauPlaceholder' id='viz17524320522260' style='position: relative'>
+                <noscript><a href='#'><img alt='sheet8 ' src='https://public.tableau.com/static/images/_1/_17524320522260/sheet8/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='_17524320522260/sheet8' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/_1/_17524320522260/sheet8/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz17524320522260');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </section>
+        <section>
+            <img src="https://via.placeholder.com/600x300?text=Operations+Sporty+Image" alt="Operations Visual" class="mx-auto rounded-lg shadow-lg">
+        </section>
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2025 נייק ישראל. כל הזכויות שמורות. 🏅</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
+```
