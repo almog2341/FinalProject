@@ -1,0 +1,120 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת 3 - תפעול והפצה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a, #f97316);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ea580c;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="py-8 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">🚚 מערכת 3 - תפעול והפצה</h1>
+        <p class="text-lg max-w-2xl mx-auto">ניהול לוגיסטיקה, שרשרת אספקה, והפצת מוצרים ביעילות.</p>
+    </header>
+    <nav class="container mx-auto px-4 mb-8">
+        <div class="flex justify-center gap-4">
+            <a href="index.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">חזרה לדף הראשי 🏠</a>
+            <a href="dash1.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">ניהול עסקי ⚙️</a>
+            <a href="dash2.html" class="btn bg-orange-500 text-white py-2 px-4 rounded-lg">אסטרטגיה עסקית 📊</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">📈 תרשים תפעול והפצה</h2>
+            <div class='tableauPlaceholder' id='viz17524320522260' style='position: relative'>
+                <noscript><a href='#'><img alt='sheet8 ' src='https://public.tableau.com/static/images/_1/_17524320522260/sheet8/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='_17524320522260/sheet8' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/_1/_17524320522260/sheet8/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz17524320522260');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </section>
+        <section>
+            <img src="https://via.placeholder.com/600x300?text=Operations+Sporty+Image" alt="Operations Visual" class="mx-auto rounded-lg shadow-lg">
+        </section>
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2025 נייק ישראל. כל הזכויות שמורות. 🏅</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
